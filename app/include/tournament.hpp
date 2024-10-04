@@ -1,5 +1,7 @@
 #pragma once
 
+#include "category.hpp"
+
 #include <array>
 #include <map>
 #include <string>
@@ -9,7 +11,7 @@
  * @brief Main class with all tools for easy tournament handling
  */
 class Tournament {
-using participantsMap =  std::map<unsigned short, std::array<std::string, 5>>;
+using participantsMap =  std::map<unsigned short, Participant>;
 public:
     Tournament() = delete;
     /**
@@ -22,9 +24,16 @@ public:
      * @brief Gets map with all participants
      * @return Returns a map with all participants
      */
-    participantsMap getAllParticipants() { return participants; }
+    participantsMap getAllParticipants() { return participants_; }
+
+    /**
+     * @brief Adds new Category to the map
+     * @param code Category code
+     */
+    void addCategory(const std::string& code);
 private:
-    participantsMap participants; ///< Map with all participants
+    participantsMap participants_; ///< Map of all participants
+    std::map<std::string, Category> categories_; ///< Map of all categories
 
     /**
      * @brief Helper function to get participants from file (don't use)

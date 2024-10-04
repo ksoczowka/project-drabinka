@@ -13,13 +13,23 @@ void Tournament::getParticipantsFromFile(const std::string& path) {
     }
     
     while(!file.eof()) {
-        std::pair<unsigned short, std::array<std::string, 5>> temp;
+        unsigned short id;
+        std::string firstName;
+        std::string lastName;
+        unsigned short age;
+        unsigned short weight;
+        char sexChar;
+        Sex sex;
 
-        file >> temp.first;
-        for(auto i = 0; i < 5; i++) {
-            file >> temp.second[i];
-        }
+        file >> id;
+        file >> firstName;
+        file >> lastName;
+        file >> sexChar;
+        sexChar == 'M' ? sex = Sex::MAN : sex = Sex::WOMAN;
+        file >> age;
+        file >> weight;
+        
 
-        participants.insert(temp);
+        participants_.insert(std::pair<unsigned short, Participant>(id, Participant(id, firstName, lastName, age, weight, sex)));
     }
 }
