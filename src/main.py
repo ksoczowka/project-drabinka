@@ -1,3 +1,7 @@
 import simpleTestExtension as ste
 
-print(ste.add(1, 3))
+path = "DATA.tsv"
+
+data = ste.getDataFromFile(path)
+
+print(data[int(input("Wpisz numer: "))])

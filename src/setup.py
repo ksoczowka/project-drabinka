@@ -5,7 +5,7 @@ import pybind11
 ext_modules = [
     Extension(
         'simpleTestExtension',
-        ['example.cpp'],
+        ['src/example.cpp'],
         include_dirs=[pybind11.get_include()],
         language='c++'
     ),
