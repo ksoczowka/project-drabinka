@@ -33,3 +33,7 @@ void Tournament::getParticipantsFromFile(const std::string& path) {
         participants_.insert(std::pair<unsigned short, Participant>(id, Participant(id, firstName, lastName, age, weight, sex)));
     }
 }
+
+void Tournament::addCategory(const std::string& code, Range<unsigned short> ageRange, Range<unsigned short> weightRange, Sex sexCategory) {
+    categories_.insert(std::pair<std::string, Category>(code, Category(code, ageRange, weightRange, sexCategory)));
+}
