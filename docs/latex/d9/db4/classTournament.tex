@@ -15,7 +15,15 @@ Main class with all tools for easy tournament handling.
 \mbox{\hyperlink{classTournament_a8c500ba128f31496bf17c194a6513d24}{Tournament}} (const std\+::string \&path)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classTournament}{Tournament}} class constructor. \end{DoxyCompactList}\item 
 participants\+Map \mbox{\hyperlink{classTournament_aa7ad6babda9750ccebaf232a6569e62d}{get\+All\+Participants}} ()
-\begin{DoxyCompactList}\small\item\em Gets map with all participants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets map with all participants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTournament_af45ca9d3e29482dce7458bb4c44a6e21}{add\+Category}} (const std\+::string \&code, \mbox{\hyperlink{structRange}{Range}}$<$ unsigned short $>$ age\+Range, \mbox{\hyperlink{structRange}{Range}}$<$ unsigned short $>$ weight\+Range, Sex sex\+Category)
+\begin{DoxyCompactList}\small\item\em Adds new \mbox{\hyperlink{classCategory}{Category}} to the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTournament_a907da3393182bc35cfab0b26c9e3c865}\label{classTournament_a907da3393182bc35cfab0b26c9e3c865}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classCategory}{Category}} $>$ {\bfseries get\+Categories} ()
+\item 
+\mbox{\Hypertarget{classTournament_afc6f0b94ab5e13291ce95e1ec4d57813}\label{classTournament_afc6f0b94ab5e13291ce95e1ec4d57813}} 
+\mbox{\hyperlink{classCategory}{Category}} {\bfseries get\+Category\+By\+Code} (const std\+::string \&code)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -40,6 +48,27 @@ Main class with all tools for easy tournament handling.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTournament_af45ca9d3e29482dce7458bb4c44a6e21}\label{classTournament_af45ca9d3e29482dce7458bb4c44a6e21}} 
+\index{Tournament@{Tournament}!addCategory@{addCategory}}
+\index{addCategory@{addCategory}!Tournament@{Tournament}}
+\doxysubsubsection{\texorpdfstring{addCategory()}{addCategory()}}
+{\footnotesize\ttfamily void Tournament\+::add\+Category (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code,  }\item[{\mbox{\hyperlink{structRange}{Range}}$<$ unsigned short $>$}]{age\+Range,  }\item[{\mbox{\hyperlink{structRange}{Range}}$<$ unsigned short $>$}]{weight\+Range,  }\item[{Sex}]{sex\+Category }\end{DoxyParamCaption})}
+
+
+
+Adds new \mbox{\hyperlink{classCategory}{Category}} to the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & category code \\
+\hline
+{\em age\+Range} & range of age using Range$<$\+T$>$ \\
+\hline
+{\em weight\+Range} & range of weight using Range$<$\+T$>$ \\
+\hline
+{\em sex\+Category} & sex category \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTournament_aa7ad6babda9750ccebaf232a6569e62d}\label{classTournament_aa7ad6babda9750ccebaf232a6569e62d}} 
 \index{Tournament@{Tournament}!getAllParticipants@{getAllParticipants}}
 \index{getAllParticipants@{getAllParticipants}!Tournament@{Tournament}}

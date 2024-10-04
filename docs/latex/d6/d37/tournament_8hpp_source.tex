@@ -4,21 +4,29 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 }
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <array>}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <map>}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{6 }
-\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classTournament}{Tournament}} \{}
-\DoxyCodeLine{12 \textcolor{keyword}{using }participantsMap =  std::map<unsigned short int, std::array<std::string, 5>>;}
-\DoxyCodeLine{13 \textcolor{keyword}{public}:}
-\DoxyCodeLine{14     \mbox{\hyperlink{classTournament}{Tournament}}() = \textcolor{keyword}{delete};}
-\DoxyCodeLine{19     \mbox{\hyperlink{classTournament}{Tournament}}(\textcolor{keyword}{const} std::string\& path);}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{25     participantsMap \mbox{\hyperlink{classTournament_aa7ad6babda9750ccebaf232a6569e62d}{getAllParticipants}}() \{ \textcolor{keywordflow}{return} participants; \}}
-\DoxyCodeLine{26 \textcolor{keyword}{private}:}
-\DoxyCodeLine{27     participantsMap participants; }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}category.hpp"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <array>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classTournament}{Tournament}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{using }participantsMap =  std::map<unsigned short, Participant>;}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{classTournament}{Tournament}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{21     \mbox{\hyperlink{classTournament}{Tournament}}(\textcolor{keyword}{const} std::string\& path);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27     participantsMap \mbox{\hyperlink{classTournament_aa7ad6babda9750ccebaf232a6569e62d}{getAllParticipants}}() \{ \textcolor{keywordflow}{return} participants\_; \}}
 \DoxyCodeLine{28 }
-\DoxyCodeLine{33     \textcolor{keywordtype}{void} getParticipantsFromFile(\textcolor{keyword}{const} std::string\& path);}
-\DoxyCodeLine{34 \};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTournament_af45ca9d3e29482dce7458bb4c44a6e21}{addCategory}}(\textcolor{keyword}{const} std::string\& code, \mbox{\hyperlink{structRange}{Range<unsigned short>}} ageRange, \mbox{\hyperlink{structRange}{Range<unsigned short>}} weightRange, Sex sexCategory);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     std::map<std::string, Category> getCategories() \{ \textcolor{keywordflow}{return} categories\_; \}}
+\DoxyCodeLine{39     \mbox{\hyperlink{classCategory}{Category}} getCategoryByCode(\textcolor{keyword}{const} std::string\& code) \{ \textcolor{keywordflow}{return} categories\_.at(code); \}}
+\DoxyCodeLine{40 \textcolor{keyword}{private}:}
+\DoxyCodeLine{41     participantsMap participants\_; }
+\DoxyCodeLine{42     std::map<std::string, Category> categories\_; }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} getParticipantsFromFile(\textcolor{keyword}{const} std::string\& path);}
+\DoxyCodeLine{49 \};}
 
 \end{DoxyCode}

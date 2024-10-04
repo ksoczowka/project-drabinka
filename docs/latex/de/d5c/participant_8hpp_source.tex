@@ -1,0 +1,35 @@
+\hypertarget{participant_8hpp_source}{}\doxysection{participant.\+hpp}
+\label{participant_8hpp_source}\index{app/include/participant.hpp@{app/include/participant.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{enum class} Sex \{}
+\DoxyCodeLine{6     MAN,}
+\DoxyCodeLine{7     WOMAN}
+\DoxyCodeLine{8 \};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classParticipant}{Participant}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{classParticipant}{Participant}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{26     \mbox{\hyperlink{classParticipant}{Participant}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}\& \textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::string\& firstName, \textcolor{keyword}{const} std::string\& lastName, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}\& age, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}\& weight, \textcolor{keyword}{const} Sex\& sex);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classParticipant_ae580f0c294e6a203235008af5b002d82}{getID}}() \{ \textcolor{keywordflow}{return} id\_; \}}
+\DoxyCodeLine{37     std::string \mbox{\hyperlink{classParticipant_a71a42efda0c22219fc2604a8227d8a25}{getFirstName}}() \{ \textcolor{keywordflow}{return} firstName\_; \}}
+\DoxyCodeLine{42     std::string \mbox{\hyperlink{classParticipant_ad8a6485c10f2518115701fabde26817e}{getLastName}}() \{ \textcolor{keywordflow}{return} lastName\_; \}}
+\DoxyCodeLine{47     std::string \mbox{\hyperlink{classParticipant_a5f630aaaf8ba14295883d743db577b29}{getName}}() \{ \textcolor{keywordflow}{return} firstName\_ + \textcolor{stringliteral}{"{} "{}} + lastName\_; \}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \mbox{\hyperlink{classParticipant_a078c7b82f894652357e5a5dc626d20b7}{getAge}}() \{ \textcolor{keywordflow}{return} age\_; \}}
+\DoxyCodeLine{57     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \mbox{\hyperlink{classParticipant_a74ea1c868842b4078e1da5ad0683c361}{getWeight}}() \{ \textcolor{keywordflow}{return} weight\_; \}}
+\DoxyCodeLine{62     Sex \mbox{\hyperlink{classParticipant_ad97b51eca46d6083c031d36568d5a980}{getSex}}() \{ \textcolor{keywordflow}{return} sex\_; \}}
+\DoxyCodeLine{63 \textcolor{keyword}{private}:}
+\DoxyCodeLine{64     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} id\_;}
+\DoxyCodeLine{65     std::string firstName\_;}
+\DoxyCodeLine{66     std::string lastName\_;}
+\DoxyCodeLine{67     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} age\_;}
+\DoxyCodeLine{68     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} weight\_;}
+\DoxyCodeLine{69     Sex sex\_;}
+\DoxyCodeLine{70 \};}
+
+\end{DoxyCode}

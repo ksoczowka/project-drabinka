@@ -72,24 +72,35 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d9/db4/classTournament.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d9/db4/classTournament.html">Tournament</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using </span>participantsMap =  std::map&lt;unsigned short int, std::array&lt;std::string, 5&gt;&gt;;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="../../d9/db4/classTournament.html">Tournament</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="../../d9/db4/classTournament.html">Tournament</a>(<span class="keyword">const</span> std::string&amp; path);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">   25</a></span>    participantsMap <a class="code hl_function" href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">getAllParticipants</a>() { <span class="keywordflow">return</span> participants; }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    participantsMap participants; </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;category.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d9/db4/classTournament.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d9/db4/classTournament.html">Tournament</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using </span>participantsMap =  std::map&lt;unsigned short, Participant&gt;;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="../../d9/db4/classTournament.html">Tournament</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="../../d9/db4/classTournament.html">Tournament</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">   27</a></span>    participantsMap <a class="code hl_function" href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">getAllParticipants</a>() { <span class="keywordflow">return</span> participants_; }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> getParticipantsFromFile(<span class="keyword">const</span> std::string&amp; path);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
-<div class="ttc" id="aclassTournament_html"><div class="ttname"><a href="../../d9/db4/classTournament.html">Tournament</a></div><div class="ttdoc">Main class with all tools for easy tournament handling.</div><div class="ttdef"><b>Definition:</b> tournament.hpp:11</div></div>
-<div class="ttc" id="aclassTournament_html_aa7ad6babda9750ccebaf232a6569e62d"><div class="ttname"><a href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">Tournament::getAllParticipants</a></div><div class="ttdeci">participantsMap getAllParticipants()</div><div class="ttdoc">Gets map with all participants.</div><div class="ttdef"><b>Definition:</b> tournament.hpp:25</div></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/db4/classTournament.html#af45ca9d3e29482dce7458bb4c44a6e21">addCategory</a>(<span class="keyword">const</span> std::string&amp; code, <a class="code hl_class" href="../../d5/d98/structRange.html">Range&lt;unsigned short&gt;</a> ageRange, <a class="code hl_class" href="../../d5/d98/structRange.html">Range&lt;unsigned short&gt;</a> weightRange, Sex sexCategory);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::map&lt;std::string, Category&gt; getCategories() { <span class="keywordflow">return</span> categories_; }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="../../d9/d39/classCategory.html">Category</a> getCategoryByCode(<span class="keyword">const</span> std::string&amp; code) { <span class="keywordflow">return</span> categories_.at(code); }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    participantsMap participants_; </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    std::map&lt;std::string, Category&gt; categories_; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> getParticipantsFromFile(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="ttc" id="aclassCategory_html"><div class="ttname"><a href="../../d9/d39/classCategory.html">Category</a></div><div class="ttdef"><b>Definition:</b> category.hpp:9</div></div>
+<div class="ttc" id="aclassTournament_html"><div class="ttname"><a href="../../d9/db4/classTournament.html">Tournament</a></div><div class="ttdoc">Main class with all tools for easy tournament handling.</div><div class="ttdef"><b>Definition:</b> tournament.hpp:13</div></div>
+<div class="ttc" id="aclassTournament_html_aa7ad6babda9750ccebaf232a6569e62d"><div class="ttname"><a href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">Tournament::getAllParticipants</a></div><div class="ttdeci">participantsMap getAllParticipants()</div><div class="ttdoc">Gets map with all participants.</div><div class="ttdef"><b>Definition:</b> tournament.hpp:27</div></div>
+<div class="ttc" id="aclassTournament_html_af45ca9d3e29482dce7458bb4c44a6e21"><div class="ttname"><a href="../../d9/db4/classTournament.html#af45ca9d3e29482dce7458bb4c44a6e21">Tournament::addCategory</a></div><div class="ttdeci">void addCategory(const std::string &amp;code, Range&lt; unsigned short &gt; ageRange, Range&lt; unsigned short &gt; weightRange, Sex sexCategory)</div><div class="ttdoc">Adds new Category to the map.</div><div class="ttdef"><b>Definition:</b> tournament.cpp:37</div></div>
+<div class="ttc" id="astructRange_html"><div class="ttname"><a href="../../d5/d98/structRange.html">Range&lt; unsigned short &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

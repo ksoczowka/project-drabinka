@@ -1,0 +1,28 @@
+\hypertarget{category_8hpp_source}{}\doxysection{category.\+hpp}
+\label{category_8hpp_source}\index{app/include/category.hpp@{app/include/category.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}participant.hpp"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}range.hpp"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classCategory}{Category}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \mbox{\hyperlink{classCategory}{Category}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{12     \mbox{\hyperlink{classCategory}{Category}}(\textcolor{keyword}{const} std::string\& code, \mbox{\hyperlink{structRange}{Range<unsigned short>}} ageRange, \mbox{\hyperlink{structRange}{Range<unsigned short>}} weightRange, Sex sexCategory);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} addParticipant(\mbox{\hyperlink{classParticipant}{Participant}}\& participant);}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     std::string code\_;}
+\DoxyCodeLine{17     \mbox{\hyperlink{structRange}{Range<unsigned short>}} ageRange\_;}
+\DoxyCodeLine{18     \mbox{\hyperlink{structRange}{Range<unsigned short>}} weightRange\_;}
+\DoxyCodeLine{19     Sex sexCategory\_;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     std::vector<Participant> participants\_;}
+\DoxyCodeLine{22 \};}
+
+\end{DoxyCode}

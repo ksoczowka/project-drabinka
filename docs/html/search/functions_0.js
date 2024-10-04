@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getallparticipants_0',['getAllParticipants',['../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d',1,'Tournament']]]
+  ['addcategory_0',['addCategory',['../d9/db4/classTournament.html#af45ca9d3e29482dce7458bb4c44a6e21',1,'Tournament']]]
 ];

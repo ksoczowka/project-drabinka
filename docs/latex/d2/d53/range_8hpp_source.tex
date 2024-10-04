@@ -1,0 +1,20 @@
+\hypertarget{range_8hpp_source}{}\doxysection{range.\+hpp}
+\label{range_8hpp_source}\index{app/include/range.hpp@{app/include/range.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{7 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{8 \textcolor{keyword}{struct }\mbox{\hyperlink{structRange}{Range}} \{}
+\DoxyCodeLine{9     \mbox{\hyperlink{structRange}{Range}}() \{\}}
+\DoxyCodeLine{10     T min;}
+\DoxyCodeLine{11     T max;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structRange_a89dd00dd3c9369c8d5a7e2c6e01be3b5}{isInRange}}(T value) \{}
+\DoxyCodeLine{18         \textcolor{keywordflow}{if}(value > max) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{19         \textcolor{keywordflow}{if} (value < min) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{20         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 \};}
+
+\end{DoxyCode}

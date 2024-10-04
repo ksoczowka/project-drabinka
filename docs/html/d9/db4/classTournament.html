@@ -83,6 +83,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7ad6babda9750ccebaf232a6569e62d"><td class="memItemLeft" align="right" valign="top">participantsMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">getAllParticipants</a> ()</td></tr>
 <tr class="memdesc:aa7ad6babda9750ccebaf232a6569e62d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets map with all participants.  <a href="../../d9/db4/classTournament.html#aa7ad6babda9750ccebaf232a6569e62d">More...</a><br /></td></tr>
 <tr class="separator:aa7ad6babda9750ccebaf232a6569e62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45ca9d3e29482dce7458bb4c44a6e21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/classTournament.html#af45ca9d3e29482dce7458bb4c44a6e21">addCategory</a> (const std::string &amp;code, <a class="el" href="../../d5/d98/structRange.html">Range</a>&lt; unsigned short &gt; ageRange, <a class="el" href="../../d5/d98/structRange.html">Range</a>&lt; unsigned short &gt; weightRange, Sex sexCategory)</td></tr>
+<tr class="memdesc:af45ca9d3e29482dce7458bb4c44a6e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds new <a class="el" href="../../d9/d39/classCategory.html">Category</a> to the map.  <a href="../../d9/db4/classTournament.html#af45ca9d3e29482dce7458bb4c44a6e21">More...</a><br /></td></tr>
+<tr class="separator:af45ca9d3e29482dce7458bb4c44a6e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907da3393182bc35cfab0b26c9e3c865"><td class="memItemLeft" align="right" valign="top"><a id="a907da3393182bc35cfab0b26c9e3c865" name="a907da3393182bc35cfab0b26c9e3c865"></a>
+std::map&lt; std::string, <a class="el" href="../../d9/d39/classCategory.html">Category</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCategories</b> ()</td></tr>
+<tr class="separator:a907da3393182bc35cfab0b26c9e3c865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6f0b94ab5e13291ce95e1ec4d57813"><td class="memItemLeft" align="right" valign="top"><a id="afc6f0b94ab5e13291ce95e1ec4d57813" name="afc6f0b94ab5e13291ce95e1ec4d57813"></a>
+<a class="el" href="../../d9/d39/classCategory.html">Category</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCategoryByCode</b> (const std::string &amp;code)</td></tr>
+<tr class="separator:afc6f0b94ab5e13291ce95e1ec4d57813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Main class with all tools for easy tournament handling. </p>
@@ -114,6 +123,57 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af45ca9d3e29482dce7458bb4c44a6e21" name="af45ca9d3e29482dce7458bb4c44a6e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45ca9d3e29482dce7458bb4c44a6e21">&#9670;&nbsp;</a></span>addCategory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tournament::addCategory </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d98/structRange.html">Range</a>&lt; unsigned short &gt;&#160;</td>
+          <td class="paramname"><em>ageRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d98/structRange.html">Range</a>&lt; unsigned short &gt;&#160;</td>
+          <td class="paramname"><em>weightRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Sex&#160;</td>
+          <td class="paramname"><em>sexCategory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds new <a class="el" href="../../d9/d39/classCategory.html">Category</a> to the map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td>category code </td></tr>
+    <tr><td class="paramname">ageRange</td><td>range of age using Range&lt;T&gt; </td></tr>
+    <tr><td class="paramname">weightRange</td><td>range of weight using Range&lt;T&gt; </td></tr>
+    <tr><td class="paramname">sexCategory</td><td>sex category </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa7ad6babda9750ccebaf232a6569e62d" name="aa7ad6babda9750ccebaf232a6569e62d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa7ad6babda9750ccebaf232a6569e62d">&#9670;&nbsp;</a></span>getAllParticipants()</h2>
 
