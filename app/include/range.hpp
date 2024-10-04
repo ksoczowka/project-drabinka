@@ -6,8 +6,17 @@
  */
 template<typename T>
 struct Range {
+    /**
+     * @brief Default constructor
+     */
     Range() {}
+    /**
+     * @brief Constructor with pre-set values
+     * @param min Minimal value (including)
+     * @param max Maximal value (including)
+     */
     Range(const T& min, const T& max) : min(min), max(max) {}
+    
     T min;
     T max;
 
