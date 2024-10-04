@@ -9,7 +9,7 @@ enum class Sex {
 
 class Participant {
 public:
-    Participant(const unsigned int& id, const std::string& firstName, std::string& lastName, const unsigned short& age, const unsigned short& weight_, const Sex& sex);
+    Participant(const unsigned int& id, const std::string& firstName, std::string& lastName, const unsigned short& age, const unsigned short& weight, const Sex& sex);
 
     unsigned int getID() { return id_; }
 private:
