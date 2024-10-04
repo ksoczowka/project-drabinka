@@ -1,8 +1,8 @@
 from setuptools import setup, Extension
 import pybind11
 
-include = [pybind11.get_include(), "./include"]
-source = ['./src/bindings.cpp']
+include = [pybind11.get_include(), './include']
+source = ['./src/bindings.cpp', './src/tournament.cpp']
 
 ext_modules = [
     Extension(
