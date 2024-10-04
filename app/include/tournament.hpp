@@ -28,9 +28,15 @@ public:
 
     /**
      * @brief Adds new Category to the map
-     * @param code Category code
+     * @param code category code
+     * @param ageRange range of age using Range<T>
+     * @param weightRange range of weight using Range<T>
+     * @param sexCategory sex category
      */
-    void addCategory(const std::string& code);
+    void addCategory(const std::string& code, Range<unsigned short> ageRange, Range<unsigned short> weightRange, Sex sexCategory);
+
+    std::map<std::string, Category> getCategories() { return categories_; }
+    Category getCategoryByCode(const std::string& code) { return categories_.at(code); }
 private:
     participantsMap participants_; ///< Map of all participants
     std::map<std::string, Category> categories_; ///< Map of all categories
