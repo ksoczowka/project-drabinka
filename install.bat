@@ -1,1 +1,1 @@
-pip install pybind11
+pip install dependencies.txt
