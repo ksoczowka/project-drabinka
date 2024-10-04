@@ -1,6 +1,6 @@
-import ProjectDrabinka as PD
 import sys
 sys.path.append('./lokalny_katalog/lib/python3.4/site-packages')
+import ProjectDrabinka as PD
 
 path = "DATA.tsv"
 
