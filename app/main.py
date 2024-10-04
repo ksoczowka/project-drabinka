@@ -13,6 +13,6 @@ weight_range = PD.RangeUnShort()
 weight_range.min = 0
 weight_range.max = 55
 
-tournament.addCategory("M12-1355-", age_range, weight_range, PD.Sex.MAN)
+tournament.addCategory("M|12-13|0-55", age_range, weight_range, PD.Sex.MAN)
 
-print(tournament.getCategoryByCode("M12-1355-"))
+print(tournament.getCategoryByCode("M|12-13|0-55"))
