@@ -7,6 +7,7 @@
 template<typename T>
 struct Range {
     Range() {}
+    Range(const T& min, const T& max) : min(min), max(max) {}
     T min;
     T max;
 
