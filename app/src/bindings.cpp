@@ -7,6 +7,7 @@ template<typename T>
 void bind_Range(pybind11::module_& m, const std::string& type_name) {
     pybind11::class_<Range<T>>(m, type_name.c_str())
     .def(pybind11::init<>())
+    .def(pybind11::init<T, T>())
     .def_readwrite("min", &Range<T>::min)
     .def_readwrite("max", &Range<T>::max)
     .def("isInRange", &Range<T>::isInRange);
