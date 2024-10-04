@@ -1,2 +1,2 @@
-python.exe src/setup.py install --inplace
-python.exe src/main.py
+python.exe app/src/setup.py install --inplace
+python.exe app/src/main.py
