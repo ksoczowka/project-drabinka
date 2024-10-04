@@ -13,7 +13,7 @@ void Tournament::getParticipantsFromFile(const std::string& path) {
     }
     
     while(!file.eof()) {
-        std::pair<unsigned short int, std::array<std::string, 5>> temp;
+        std::pair<unsigned short, std::array<std::string, 5>> temp;
 
         file >> temp.first;
         for(auto i = 0; i < 5; i++) {
