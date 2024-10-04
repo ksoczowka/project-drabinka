@@ -1,2 +1,2 @@
-python.exe app/setup.py install --prefix=./projectDrabinkaExtension
+python.exe app/setup.py install --user
 python.exe app/main.py
