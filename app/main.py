@@ -2,6 +2,6 @@ import ProjectDrabinka as PD
 
 path = "DATA.tsv"
 
-data = PD.getDataFromFile(path)
+tournament = PD.Tournament(path)
 
-print(data[int(input("Wpisz numer: "))])
+print(tournament.getAllParticipants())
