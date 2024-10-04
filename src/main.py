@@ -1,7 +1,7 @@
-import simpleTestExtension as ste
+import ProjectDrabinka as PD
 
 path = "DATA.tsv"
 
-data = ste.getDataFromFile(path)
+data = PD.getDataFromFile(path)
 
 print(data[int(input("Wpisz numer: "))])

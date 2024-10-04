@@ -4,14 +4,14 @@ import pybind11
 
 ext_modules = [
     Extension(
-        'simpleTestExtension',
-        ['src/example.cpp'],
+        'ProjectDrabinka',
+        ['src/ProjectDrabinka.cpp'],
         include_dirs=[pybind11.get_include()],
         language='c++'
     ),
 ]
 
 setup(
-    name='simpleTestExtension',
+    name='ProjectDrabinka',
     ext_modules=ext_modules,
 )

@@ -33,7 +33,7 @@ dataType dataFromFileToMap(const std::string& pathToFile) {
 
 
 
-PYBIND11_MODULE(simpleTestExtension, m) {
-    m.doc() = "Simple Testing of the Extension";
+PYBIND11_MODULE(ProjectDrabinka, m) {
+    m.doc() = "Project Drabinka backend";
     m.def("getDataFromFile", &dataFromFileToMap, "Gets data from file and returns it to dictionary");
 }
